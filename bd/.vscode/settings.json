@@ -2,7 +2,9 @@
     "files.associations": {
         "iterator": "cpp",
         "unordered_map": "cpp",
-        "__hash_table": "cpp"
+        "__hash_table": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
