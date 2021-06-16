@@ -8,7 +8,8 @@
         "__locale": "cpp",
         "__string": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "queue": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
