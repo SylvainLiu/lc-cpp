@@ -9,7 +9,8 @@
         "__string": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
