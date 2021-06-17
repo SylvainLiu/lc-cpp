@@ -10,7 +10,11 @@
         "string": "cpp",
         "string_view": "cpp",
         "queue": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "ios": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
