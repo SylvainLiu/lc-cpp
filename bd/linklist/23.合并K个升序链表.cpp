@@ -1,3 +1,4 @@
+#include<queue>
 #include<vector>
 using namespace std;
 
@@ -9,7 +10,7 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-class Solution {
+class Solution1 {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         return merge(lists, 0, lists.size() - 1);
@@ -38,4 +39,31 @@ public:
         cur->next = aPtr ? aPtr : bPtr;
         return head.next;
     }
+};
+
+class Solution {
+    public:
+        struct status {
+            int val;
+            ListNode *ptr;
+            bool operator < (const status *other) const {
+                return val > other->val;
+            }
+        };
+
+        priority_queue<status> q;
+
+        ListNode* mergeKLists(vector<ListNode*>& lists) {
+            for (auto node: lists) {
+                if (node) q.push({node->val, node});
+            }
+            ListNode head, *tail = &head;
+            while(!q.empty()) {
+                auto f = q.top(); q.pop();
+                tail->next = f.ptr;
+                tail = tail->next;
+                if (f.ptr->next) q.push({f.ptr->next->val, f.ptr->next});
+            }
+            return head.next;
+        }
 };
